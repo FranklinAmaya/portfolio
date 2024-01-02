@@ -24,7 +24,7 @@
   }
 
   .nav--item.clicked {
-    @apply underline underline-offset-auto;
+    @apply underline underline-offset-8;
   }
 
   li:hover .nav--item,

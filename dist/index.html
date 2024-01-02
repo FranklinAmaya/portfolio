@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,10 +21,10 @@
     >
       <div class="min-h-screen grid lg:grid-cols-2 lg:gap-5">
         <header
-          class="min-h-screen w-full grid justify-center content-center lg:sticky lg:top-0 lg:max-h-screen"
+          class="min-h-screen w-full grid justify-center content-center lg:sticky lg:top-0 lg:max-h-screen lg:py-24"
         >
           <section
-            class="h-full grid grid-rows-[auto] justify-items-center gap-y-12 lg:gap-y-0"
+            class="h-full lg:h-[calc(100vh-12rem)] grid grid-rows-[auto] justify-items-center gap-y-12 lg:gap-y-0"
           >
             <div
               class="grid justify-center content-center w-full aspect-square max-w-[425px] border-2 border-nyanza rounded-full overflow-hidden lg:hidden"
@@ -35,26 +35,45 @@
                 alt="headshot of franklin amaya"
               />
             </div>
-            <div class="grid">
-              <h1 class="h2 font-bold text-3xl xs:text-5xl">Franklin Amaya</h1>
-              <h2 class="h2 mt-3">Software Engineer</h2>
-              <p class="paragraph mt-3 max-w-sm leading-normal">
-                Experienced engineer who is passionate about building accessible
-                products.
-              </p>
-              <nav class="hidden lg:block mt-12" role="navigation">
-                <ul>
-                  <li class="w-fit">
-                    <a class="nav--item" href="#about"> About </a>
-                  </li>
-                  <li class="w-fit mt-5">
-                    <a class="nav--item" href="#experience"> Experience </a>
-                  </li>
-                  <li class="w-fit mt-5">
-                    <a class="nav--item" href="#contact"> Contact </a>
-                  </li>
-                </ul>
-              </nav>
+
+            <div class="grid grid-rows-[1fr]">
+              <div>
+                <h1 class="h2 font-bold text-3xl xs:text-5xl">
+                  Franklin Amaya
+                </h1>
+                <h2 class="h2 mt-3">Software Engineer</h2>
+                <p class="paragraph mt-3 max-w-sm leading-normal">
+                  Experienced engineer who is passionate about building
+                  accessible products.
+                </p>
+                <nav class="hidden lg:block mt-12" role="navigation">
+                  <ul>
+                    <li class="w-fit">
+                      <a id="about-nav-link" class="nav--item" href="#about">
+                        About
+                      </a>
+                    </li>
+                    <li class="w-fit mt-5">
+                      <a
+                        id="experience-nav-link"
+                        class="nav--item"
+                        href="#experience"
+                      >
+                        Experience
+                      </a>
+                    </li>
+                    <li class="w-fit mt-5">
+                      <a
+                        id="contact-nav-link"
+                        class="nav--item"
+                        href="#contact"
+                      >
+                        Contact
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
               <ul
                 class="grid grid-cols-[repeat(3,60px)] mt-5 lg:mt-10"
                 aria-label="social media links"
@@ -126,9 +145,9 @@
             </div>
           </section>
         </header>
-        <main class="grid grid-rows-[repeat(4,auto)]">
+        <main class="grid grid-rows-[repeat(4,auto)] py-24">
           <section
-            class="min-h-screen hidden lg:grid justify-center content-center"
+            class="h-fit hidden lg:grid justify-center content-start mb-16"
           >
             <div
               class="grid justify-center content-center w-full aspect-square max-w-[425px] border-2 border-nyanza rounded-full overflow-hidden"
@@ -140,7 +159,7 @@
               />
             </div>
           </section>
-          <section id="about" class="mb-16 md:mb-24 lg:mb-36">
+          <section id="about" class="mb-16 md:mb-24 lg:mb-36 scroll-mt-24">
             <div
               class="block lg:hidden sticky top-0 z-20 -mx-6 mb-4 w-[calc(100% + 12px)] bg-dark_green-300/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
             >
@@ -150,7 +169,7 @@
                 About
               </h2>
             </div>
-            <div class="hidden lg:block mb-4 py-5">
+            <div class="hidden lg:block mb-4 pt-2 pb-8">
               <h2
                 class="h2 uppercase font-bold tracking-widest text-base overflow-hidden"
               >
@@ -175,7 +194,7 @@
               pellentesque sit amet porttitor.
             </p>
           </section>
-          <section id="experience" class="mb-16 md:mb-24 lg:mb-36">
+          <section id="experience" class="mb-16 md:mb-24 lg:mb-36 scroll-mt-24">
             <div
               class="sticky top-0 z-20 -mx-6 mb-4 w-[calc(100% + 12px)] bg-dark_green-300/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
             >
@@ -185,30 +204,370 @@
                 Experience
               </h2>
             </div>
-            <div class="hidden invisible lg:visible lg:block mb-4 py-5">
+            <div class="hidden invisible lg:visible lg:block mb-4 pt-2 pb-8">
               <h2
                 class="h2 uppercase font-bold tracking-widest text-base overflow-hidden"
               >
                 Experience
               </h2>
             </div>
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor
-              dignissim convallis aenean et.
-            </p>
-            <p class="paragraph mt-4">
-              Sit amet risus nullam eget felis eget nunc. Maecenas pharetra
-              convallis posuere morbi leo. Adipiscing diam donec adipiscing
-              tristique risus nec feugiat.
-            </p>
-            <p class="paragraph mt-4">
-              Ultrices in iaculis nunc sed augue. Elementum nisi quis eleifend
-              quam adipiscing. Ac turpis egestas integer eget aliquet. Lobortis
-              mattis aliquam faucibus purus in massa. Lorem dolor sed viverra
-              ipsum nunc aliquet bibendum. Varius morbi enim nunc faucibus a
-              pellentesque sit amet porttitor.
-            </p>
+            <div
+              class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
+            >
+              <div
+                class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-dartmouth_green-600/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+              ></div>
+              <header
+                class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-celadon-500 sm:col-span-2"
+                aria-label="July 2023 to Present"
+              >
+                July 2023 — Present
+              </header>
+              <div class="z-10 sm:col-span-6">
+                <h3 class="font-medium leading-snug text-celadon-800">
+                  <div>
+                    <a
+                      class="inline-flex items-baseline font-medium leading-tight text-celadon-800 hover:text-teal-400 focus-visible:text-teal-400 group/link text-base"
+                      href="https://boozallen.com"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Lead Engineer at Upstatement (opens in a new tab)"
+                      ><span
+                        class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+                      ></span
+                      ><span
+                        >Software Engineer -
+                        <span class="inline-block"
+                          >Booz Allen Hamilton
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                              clip-rule="evenodd"
+                            ></path></svg></span></span
+                    ></a>
+                  </div>
+                  <div>
+                    <div class="text-celadon-500" aria-hidden="true">
+                      Arlington, VA
+                    </div>
+                  </div>
+                </h3>
+                <p
+                  class="text-celadon-800 hover:text-celadon-500 mt-2 text-sm leading-normal"
+                >
+                  Ultrices in iaculis nunc sed augue. Elementum nisi quis
+                  eleifend quam adipiscing. Ac turpis egestas integer eget
+                  aliquet. Lobortis mattis aliquam faucibus purus in massa.
+                  Lorem dolor sed viverra ipsum nunc aliquet bibendum. Varius
+                  morbi enim nunc faucibus a pellentesque sit amet porttitor.
+                </p>
+                <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      React
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      MUI
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      Typescript
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      Node.js
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      Docker
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      Elastic Search
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      Neo4j
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      SQL
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="group relative grid pb-1 mt-8 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
+            >
+              <div
+                class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-dartmouth_green-600/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+              ></div>
+              <header
+                class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-celadon-500 sm:col-span-2"
+                aria-label="January 2022 to october 2022"
+              >
+                Jan 2022 — Oct 2022
+              </header>
+              <div class="z-10 sm:col-span-6">
+                <h3 class="font-medium leading-snug text-celadon-800">
+                  <div>
+                    <a
+                      class="inline-flex items-baseline font-medium leading-tight text-celadon-800 hover:text-teal-400 focus-visible:text-teal-400 group/link text-base"
+                      href="https://www2.deloitte.com/us/en.html"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="software engineer at deloite"
+                      ><span
+                        class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+                      ></span
+                      ><span
+                        >Software Engineer -
+                        <span class="inline-block"
+                          >Deloitte
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                              clip-rule="evenodd"
+                            ></path></svg></span></span
+                    ></a>
+                  </div>
+                  <div>
+                    <div class="text-celadon-500" aria-hidden="true">
+                      Rosslyn, VA
+                    </div>
+                  </div>
+                </h3>
+                <p
+                  class="text-celadon-800 hover:text-celadon-500 mt-2 text-sm leading-normal"
+                >
+                  Ultrices in iaculis nunc sed augue. Elementum nisi quis
+                  eleifend quam adipiscing. Ac turpis egestas integer eget
+                  aliquet. Lobortis mattis aliquam faucibus purus in massa.
+                  Lorem dolor sed viverra ipsum nunc aliquet bibendum. Varius
+                  morbi enim nunc faucibus a pellentesque sit amet porttitor.
+                </p>
+                <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      React
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      Typescript
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      Tailwind CSS
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      SEMOSS
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      Java
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="group relative grid pb-1 mt-8 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
+            >
+              <div
+                class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-dartmouth_green-600/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+              ></div>
+              <header
+                class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-celadon-500 sm:col-span-2"
+                aria-label="January 2022 to october 2022"
+              >
+                June 2019 — Jan 2022
+              </header>
+              <div class="z-10 sm:col-span-6">
+                <h3 class="font-medium leading-snug text-celadon-800">
+                  <div>
+                    <a
+                      class="inline-flex items-baseline font-medium leading-tight text-celadon-800 hover:text-teal-400 focus-visible:text-teal-400 group/link text-base"
+                      href="https://www.navsea.navy.mil/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="software engineer at navsea"
+                      ><span
+                        class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+                      ></span
+                      ><span
+                        >Software Engineer -
+                        <span class="inline-block"
+                          >Navsea
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                              clip-rule="evenodd"
+                            ></path></svg></span></span
+                    ></a>
+                  </div>
+                  <div>
+                    <div class="text-celadon-500" aria-hidden="true">
+                      Virginia Beach, VA
+                    </div>
+                  </div>
+                </h3>
+                <p
+                  class="text-celadon-800 hover:text-celadon-500 mt-2 text-sm leading-normal"
+                >
+                  Ultrices in iaculis nunc sed augue. Elementum nisi quis
+                  eleifend quam adipiscing. Ac turpis egestas integer eget
+                  aliquet. Lobortis mattis aliquam faucibus purus in massa.
+                  Lorem dolor sed viverra ipsum nunc aliquet bibendum. Varius
+                  morbi enim nunc faucibus a pellentesque sit amet porttitor.
+                </p>
+                <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      React
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      MUI
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      GraphQL
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      Node.js
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      OrientDB
+                    </div>
+                  </li>
+                  <li class="mr-1.5 mt-2">
+                    <div
+                      class="flex items-center rounded-full bg-teal-300/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                    >
+                      SQL
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <a
+              class="inline-flex items-baseline font-medium leading-tight text-celadon-800 hover:text-teal-400 focus-visible:text-teal-400 group/link text-base mt-10"
+              href="#resume"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="view full resume"
+            >
+              <span class="inline-block">
+                View Full Resume
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                    clip-rule="evenodd"
+                  ></path></svg></span
+            ></a>
+          </section>
+          <section id="contact" class="mb-16 md:mb-24 lg:mb-36 scroll-mt-24">
+            <div
+              class="sticky top-0 z-20 -mx-6 mb-4 w-[calc(100% + 12px)] bg-dark_green-300/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+            >
+              <h2
+                class="h2 uppercase font-bold tracking-widest text-base overflow-hidden"
+              >
+                Contact
+              </h2>
+            </div>
+            <div class="hidden invisible lg:visible lg:block mb-4 pt-2 pb-8">
+              <h2
+                class="h2 uppercase font-bold tracking-widest text-base overflow-hidden"
+              >
+                Contact
+              </h2>
+            </div>
           </section>
         </main>
       </div>
@@ -218,14 +577,10 @@
         const navItems = document.querySelectorAll(".nav--item");
 
         navItems.forEach(function (item) {
-          console.log(item);
           item.addEventListener("click", function (event) {
-            event.preventDefault();
-            // Remove 'clicked' class from all nav items
             navItems.forEach(function (navItem) {
               navItem.classList.remove("clicked");
             });
-            // Add 'clicked' class to the clicked nav item
             item.classList.add("clicked");
           });
         });
