@@ -11,8 +11,26 @@
     fill: white;
   }
 
-  header {
-    @apply text-nyanza-800;
+  .h2 {
+    @apply text-nyanza-500 text-xl xs:text-3xl;
+  }
+
+  .paragraph {
+    @apply text-xl text-celadon-500;
+  }
+
+  .nav--item {
+    @apply text-sm text-celadon-500 uppercase font-bold tracking-widest flex transition ease-in-out delay-0 duration-150;
+  }
+
+  .nav--item.clicked {
+    @apply underline underline-offset-auto;
+  }
+
+  li:hover .nav--item,
+  li:focus-within .nav--item,
+  .nav--item.clicked {
+    @apply text-celadon-800 scale-110 translate-x-1;
   }
 
   .icon {
