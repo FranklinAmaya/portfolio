@@ -177,21 +177,20 @@
               </h2>
             </div>
             <p class="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor
-              dignissim convallis aenean et.
+              Driven and versatile software engineer with a proven track record
+              of delivering innovative solutions across diverse domains. My
+              expertise spans full-stack development, UI/UX design, and project
+              leadership in both commercial and government sectors.
             </p>
             <p class="paragraph mt-4">
-              Sit amet risus nullam eget felis eget nunc. Maecenas pharetra
-              convallis posuere morbi leo. Adipiscing diam donec adipiscing
-              tristique risus nec feugiat.
+              I have a Bachelor's degree in Computer Science from the University
+              of Virginia, my skill set encompasses a breadth of programming
+              languages, software development methodologies, and a dedication to
+              advancing technology for mission-critical objectives.
             </p>
             <p class="paragraph mt-4">
-              Ultrices in iaculis nunc sed augue. Elementum nisi quis eleifend
-              quam adipiscing. Ac turpis egestas integer eget aliquet. Lobortis
-              mattis aliquam faucibus purus in massa. Lorem dolor sed viverra
-              ipsum nunc aliquet bibendum. Varius morbi enim nunc faucibus a
-              pellentesque sit amet porttitor.
+              Outside of engineering and work, I enjoy spending time outdoors
+              through running, soccer, and snowboarding.
             </p>
           </section>
           <section id="experience" class="mb-16 md:mb-24 lg:mb-32 scroll-mt-24">
@@ -262,11 +261,15 @@
                 <p
                   class="text-celadon-800 hover:text-celadon-500 mt-2 text-sm leading-normal"
                 >
-                  Ultrices in iaculis nunc sed augue. Elementum nisi quis
-                  eleifend quam adipiscing. Ac turpis egestas integer eget
-                  aliquet. Lobortis mattis aliquam faucibus purus in massa.
-                  Lorem dolor sed viverra ipsum nunc aliquet bibendum. Varius
-                  morbi enim nunc faucibus a pellentesque sit amet porttitor.
+                  Contributed significantly to the end-to-end development of the
+                  Gamechanger app, enabling users to search, compare, and
+                  analyze policy documents. Leveraged Elasticsearch to expedite
+                  the analysis of over 50,000 documents, improving
+                  decision-making. Spearheaded the TypeScript integration into
+                  Docker for 20+ engineers, enhancing developer experience and
+                  code quality. Led initiatives that improved responsive design
+                  and accessibility, leading to increased user engagement
+                  durations.
                 </p>
                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
                   <li class="mr-1.5 mt-2">
@@ -379,11 +382,13 @@
                 <p
                   class="text-celadon-800 hover:text-celadon-500 mt-2 text-sm leading-normal"
                 >
-                  Ultrices in iaculis nunc sed augue. Elementum nisi quis
-                  eleifend quam adipiscing. Ac turpis egestas integer eget
-                  aliquet. Lobortis mattis aliquam faucibus purus in massa.
-                  Lorem dolor sed viverra ipsum nunc aliquet bibendum. Varius
-                  morbi enim nunc faucibus a pellentesque sit amet porttitor.
+                  Developed a ReactJS web application using TailwindCSS to
+                  enable program managers to monitor Independent Duty Corpsman
+                  data through intuitive data visualizations. Orchestrated UI/UX
+                  design procedures, crafting mockups and validating designs via
+                  demonstrations with clients. Ensured Section 508 compliance,
+                  enabling accessibility for users with disabilities via screen
+                  readers and specialized keys.
                 </p>
                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
                   <li class="mr-1.5 mt-2">
@@ -475,11 +480,9 @@
                 <p
                   class="text-celadon-800 hover:text-celadon-500 mt-2 text-sm leading-normal"
                 >
-                  Ultrices in iaculis nunc sed augue. Elementum nisi quis
-                  eleifend quam adipiscing. Ac turpis egestas integer eget
-                  aliquet. Lobortis mattis aliquam faucibus purus in massa.
-                  Lorem dolor sed viverra ipsum nunc aliquet bibendum. Varius
-                  morbi enim nunc faucibus a pellentesque sit amet porttitor.
+                  Contributed to two major projects building and maintaining
+                  code for the Navy International Programs Office and Strike
+                  Force Interoperability Officer (SFIO) teams.
                 </p>
                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
                   <li class="mr-1.5 mt-2">
@@ -591,6 +594,45 @@
             item.classList.add("clicked");
           });
         });
+      });
+
+      // Add a scroll event listener to the window
+      window.addEventListener("scroll", function () {
+        // Get the position of the 'about' div relative to the viewport
+        const rect = document.getElementById("about").getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+          document.getElementById("about-nav-link").classList.add("clicked");
+          document
+            .getElementById("experience-nav-link")
+            .classList.remove("clicked");
+          document
+            .getElementById("contact-nav-link")
+            .classList.remove("clicked");
+        }
+
+        const rect2 = document
+          .getElementById("experience")
+          .getBoundingClientRect();
+        if (rect2.top >= 0 && rect2.bottom <= window.innerHeight) {
+          document.getElementById("about-nav-link").classList.remove("clicked");
+          document
+            .getElementById("experience-nav-link")
+            .classList.add("clicked");
+          document
+            .getElementById("contact-nav-link")
+            .classList.remove("clicked");
+        }
+
+        const rect3 = document
+          .getElementById("contact")
+          .getBoundingClientRect();
+        if (rect3.top >= 0 && rect3.bottom <= window.innerHeight) {
+          document.getElementById("about-nav-link").classList.remove("clicked");
+          document
+            .getElementById("experience-nav-link")
+            .classList.remove("clicked");
+          document.getElementById("contact-nav-link").classList.add("clicked");
+        }
       });
     </script>
   </body>
